@@ -1,10 +1,12 @@
 {
-  "name": "boilerplate",
+  "name": "website-from-scratch",
   "version": "1.0.0",
   "scripts": {
     "start": "npm run development",
-    "development": "webpack serve --progress --config webpack.config.development.js",
-    "build": "webpack --progress --config webpack.config.build.js"
+    "frontend:development": "webpack serve --progress --config webpack.config.development.js",
+    "frontend:build": "webpack --progress --config webpack.config.build.js",
+    "backend:build": "node app.js",
+    "backend:development": "nodemon app.js"
   },
   "author": "Firdausy Bashir",
   "devDependencies": {
@@ -34,5 +36,15 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@prismicio/client": "^6.7.1",
+    "@prismicio/helpers": "^2.3.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.20",
+    "prismic-dom": "^2.2.7",
+    "pug": "^3.0.2"
   }
 }
